@@ -18,7 +18,7 @@ binding = "OUTBOX"
 # 每分钟 tick：遍历已注册的 pair 重算 impulse，命中就实时调 AI 生成 → outbox + 推送。
 # 不需要主动消息可注释掉这两行。
 [triggers]
-crons = ["* * * * *"]
+crons = ["*/5 * * * *"]
 
 # 微信 ClawBot 桥接：每个 inbox 一个 Durable Object 常驻收微信消息（免费版可用，SQLite 存储）。
 # Sync fork 后自动部署即生效，无需手动操作。
